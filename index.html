@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kikkes Scents | Fragrance for Every Space</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+    <a href="#home" class="logo-link">
+        <img src="images/logo.jpg" alt="Kikkes Scents" class="logo">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton">
+        Bag <span id="cartCount">0</span>
+    </button>
+
+    <button class="menu-button" id="menuButton">☰</button>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <picture>
+    <source media="(max-width: 768px)" srcset="images/hero-mobile.jpg">
+    <img 
+        src="images/hero.jpg"
+        alt="Kikkes Scents fragrance collection"
+        class="hero-image"
+    >
+</picture>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="eyebrow">KIKKES SCENTS</p>
+
+        <h1>
+            Fragrance<br>
+            for Every Space.
+        </h1>
+
+        <p class="hero-text">
+            Beautifully crafted scents designed to make
+            every corner of your world feel a little more special.
+        </p>
+
+        <a href="#collections" class="primary-button">
+            Explore the Collection
+        </a>
+
+    </div>
+
+</section>
+
+<!-- INTRO -->
+<section class="intro-section">
+
+    <div class="section-label">THE KIKKES EXPERIENCE</div>
+
+    <h2>
+        Scent is more than<br>
+        a fragrance.
+    </h2>
+
+    <p>
+        It is the feeling that welcomes you home,
+        the atmosphere that sets the mood and the
+        little luxury that makes an ordinary moment
+        feel unforgettable.
+    </p>
+
+</section>
+
+
+<!-- COLLECTIONS -->
+<section class="collections-section" id="collections">
+
+    <div class="section-heading centered">
+        <p class="eyebrow">DISCOVER</p>
+
+        <h2>Shop by Collection</h2>
+
+        <p>
+            Choose a collection and find the fragrance
+            made for your space.
+        </p>
+    </div>
+
+
+    <div class="collection-grid">
+
+        <!-- ROOM SPRAY -->
+        <button
+            class="collection-card"
+            data-collection="room-spray"
+        >
+
+            <div class="collection-image">
+                <img
+                    src="images/collection/room-spray.jpg"
+                    alt="Room Spray"
+                >
+            </div>
+
+            <div class="collection-content">
+                <span>01</span>
+
+                <h3>Room Spray</h3>
+
+                <p>
+                    Instantly refresh your space with
+                    beautifully scented mists designed
+                    to create a clean and inviting atmosphere.
+                </p>
+
+                <strong>Explore Room Spray →</strong>
+            </div>
+
+        </button>
+
+
+        <!-- DIFFUSER -->
+        <button
+            class="collection-card"
+            data-collection="diffuser"
+        >
+
+            <div class="collection-image">
+                <img
+                    src="images/collection/diffuser.jpg"
+                    alt="Diffusers"
+                >
+            </div>
+
+            <div class="collection-content">
+                <span>02</span>
+
+                <h3>Diffusers</h3>
+
+                <p>
+                    Let beautiful fragrance move through
+                    your space or accompany you on the road
+                    with our reed and car diffusers.
+                </p>
+
+                <strong>Explore Diffusers →</strong>
+            </div>
+
+        </button>
+
+
+        <!-- CANDLE -->
+        <button
+            class="collection-card"
+            data-collection="scented-candle"
+        >
+
+            <div class="collection-image">
+                <img
+                    src="images/collection/scented-candle.jpg"
+                    alt="Scented Candle"
+                >
+            </div>
+
+            <div class="collection-content">
+                <span>03</span>
+
+                <h3>Scented Candle</h3>
+
+                <p>
+                    Set the mood with warm candlelight and
+                    beautifully layered fragrances made for
+                    slow, cosy moments.
+                </p>
+
+                <strong>Explore Candles →</strong>
+            </div>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP AREA -->
+<section class="shop-section" id="shop">
+
+    <div class="shop-header">
+
+        <button
+            id="backButton"
+            class="back-button hidden"
+        >
+            ← Back to Collections
+        </button>
+
+        <div>
+            <p class="eyebrow" id="shopEyebrow"></p>
+
+            <h2 id="shopTitle"></h2>
+
+            <p id="shopDescription"></p>
+        </div>
+
+    </div>
+
+
+    <!-- DIFFUSER TYPE SELECTION -->
+    <div
+        id="diffuserOptions"
+        class="diffuser-options hidden"
+    >
+
+        <button
+            class="diffuser-option"
+            data-diffuser="reed-diffuser"
+        >
+
+            <div class="option-image">
+                <img
+                    src="images/reed-diffuser.jpg"
+                    alt="Reed Diffuser"
+                >
+            </div>
+
+            <div>
+                <span>HOME FRAGRANCE</span>
+                <h3>Reed Diffuser</h3>
+
+                <p>
+                    Continuous fragrance for your
+                    home, office or personal space.
+                </p>
+
+                <strong>Explore Reed Diffusers →</strong>
+            </div>
+
+        </button>
+
+
+        <button
+            class="diffuser-option"
+            data-diffuser="car-diffuser"
+        >
+
+            <div class="option-image">
+                <img
+                    src="images/car-diffuser/fresh-linen.jpg"
+                    alt="Car Diffuser"
+                >
+            </div>
+
+            <div>
+                <span>ON THE GO</span>
+                <h3>Car Diffuser</h3>
+
+                <p>
+                    Take your favourite Kikkes scent
+                    with you wherever you go.
+                </p>
+
+                <strong>Explore Car Diffusers →</strong>
+            </div>
+
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+    <div
+        id="productsGrid"
+        class="products-grid hidden"
+    ></div>
+
+</section>
+
+
+<!-- WHY KIKKES -->
+<!-- WHY KIKKES -->
+<section class="why-section">
+
+    <div class="why-image">
+        <img
+            src="images/why-kikkes.jpg"
+            alt="Kikkes Scents fragrance in a beautiful interior"
+        >
+    </div>
+
+    <div class="why-content">
+
+        <p class="eyebrow">WHY KIKKES</p>
+
+        <h2>
+            Made to be<br>
+            remembered.
+        </h2>
+
+        <p class="why-intro">
+            At Kikkes Scents, fragrance is about creating
+            an atmosphere you want to return to.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <span>01</span>
+                <div>
+                    <h4>Beautiful Scents</h4>
+                    <p>Carefully selected fragrance profiles designed to set the mood.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <span>02</span>
+                <div>
+                    <h4>Every Space</h4>
+                    <p>From your room to your car and every space in between.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <span>03</span>
+                <div>
+                    <h4>Made With Intention</h4>
+                    <p>Designed around comfort, mood and ambience.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+
+    <p class="eyebrow">OUR STORY</p>
+
+    <h2>
+        Your space should<br>
+        smell as beautiful<br>
+        as it feels.
+    </h2>
+
+    <p class="about-text">
+        Kikkes Scents was created for people who believe
+        that fragrance can completely transform an
+        environment. From refreshing room sprays to
+        elegant diffusers and cosy candles, every scent
+        is created to bring something special into your space.
+    </p>
+
+</section>
+
+
+<!-- CONTACT CTA -->
+<section class="contact-section" id="contact">
+
+    <div>
+
+        <p class="eyebrow">READY TO FIND YOUR SCENT?</p>
+
+        <h2>
+            Make your space<br>
+            smell unforgettable.
+        </h2>
+
+        <p>
+            Explore the collection and find a fragrance
+            that feels like you.
+        </p>
+
+        <a
+            href="#collections"
+            class="primary-button"
+        >
+            Shop the Collection
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCT MODAL -->
+<div
+    id="productModal"
+    class="modal hidden"
+>
+
+    <div class="modal-box">
+
+        <button
+            id="closeModal"
+            class="close-button"
+        >
+            ×
+        </button>
+
+        <div class="modal-image">
+            <img id="modalImage" src="" alt="">
+        </div>
+
+        <div class="modal-content">
+
+            <p id="modalType" class="eyebrow"></p>
+
+            <h2 id="modalName"></h2>
+
+            <p id="modalDescription"></p>
+
+            <div class="profile-box">
+                <span>Scent Profile</span>
+                <p id="modalProfile"></p>
+            </div>
+
+
+            <label for="variantSelect">
+                Size
+            </label>
+
+            <select id="variantSelect"></select>
+
+
+            <div class="quantity-row">
+
+                <span>Quantity</span>
+
+                <div class="quantity-control">
+
+                    <button id="minusQuantity">−</button>
+
+                    <span id="quantity">1</span>
+
+                    <button id="plusQuantity">+</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-bottom">
+
+                <strong id="modalPrice"></strong>
+
+                <button
+                    id="addToCart"
+                    class="primary-button"
+                >
+                    Add to Bag
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CART -->
+<aside
+    id="cartDrawer"
+    class="cart-drawer"
+>
+
+    <div class="cart-header">
+
+        <h2>Your Bag</h2>
+
+        <button id="closeCart">
+            ×
+        </button>
+
+    </div>
+
+    <div
+        id="cartItems"
+        class="cart-items"
+    ></div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                ₦0
+            </strong>
+
+        </div>
+
+        <button
+            id="checkoutWhatsApp"
+            class="whatsapp-button"
+        >
+            Checkout on WhatsApp
+        </button>
+
+    </div>
+
+</aside>
+
+<div
+    id="cartOverlay"
+    class="cart-overlay"
+></div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-brand">
+
+        <img
+            src="images/logo.jpg"
+            alt="Kikkes Scents"
+        >
+
+        <p>
+            Fragrance for Every Space.
+        </p>
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Kikkes Scents. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="product.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
